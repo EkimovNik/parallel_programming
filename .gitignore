@@ -1,0 +1,19 @@
+# Бинарные файлы C++
+*.exe
+*.obj
+*.pdb
+*.ilk
+*.exp
+*.lib
+
+# Python
+__pycache__/
+*.pyc
+
+# VS Code / Visual Studio
+.vscode/
+.vs/
+
+# Временные
+*.tmp
+*~
