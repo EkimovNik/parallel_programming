@@ -11,18 +11,21 @@
 
 ---
 ## Структура репозитория
+
+```
 parallel_programming/
-├── lab1/ — умножение матриц (последовательная версия)
-│ ├── src/ — исходный код C++
-│ ├── input/ — входные матрицы
-│ ├── output/ — результаты экспериментов
-│ └── README.md — отчёт по лабораторной
-├── scripts/ — общие Python-скрипты
-│ ├── generate_matrix.py
-│ ├── verify.py
-│ ├── experiments.py
-│ └── plot_graphs.py
-└── README.md — этот файл
+├── lab1/
+│   ├── src/lab1.cpp
+│   ├── input/
+│   ├── output/
+│   └── README.md
+├── scripts/
+│   ├── generate_matrix.py
+│   ├── verify.py
+│   ├── experiments.py
+│   └── plot_graphs.py
+└── README.md
+```
 ---
 
 ## Как запускать скрипты

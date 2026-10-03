@@ -17,3 +17,8 @@ __pycache__/
 # Временные
 *.tmp
 *~
+#Тяжелые файлы
+lab1/input/matrix_a.txt
+lab1/input/matrix_b.txt
+lab1/output/result.txt
+lab1/output/info.txt
