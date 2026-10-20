@@ -1,24 +1,29 @@
-# Бинарные файлы C++
-*.exe
+# MSVC артефакты
 *.obj
+*.exe
 *.pdb
 *.ilk
 *.exp
 *.lib
 
+# Рабочие файлы ЛР1
+lab1/input/*
+lab1/output/result.txt
+lab1/output/info.txt
+
+# Рабочие файлы ЛР2
+lab2/input/*
+lab2/output/result.txt
+lab2/logs/*
+
 # Python
 __pycache__/
 *.pyc
 
-# VS Code / Visual Studio
-.vscode/
-.vs/
-
-# Временные
-*.tmp
-*~
-#Тяжелые файлы
-lab1/input/matrix_a.txt
-lab1/input/matrix_b.txt
-lab1/output/result.txt
-lab1/output/info.txt
+# Таблицы и графики ЛР — коммитим
+!lab1/output/experiments.txt
+!lab1/output/graph.png
+!lab2/output/experiments_omp.txt
+!lab2/speedup.png
+!lab2/efficiency.png
+!lab2/time_vs_size.png

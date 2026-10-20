@@ -16,7 +16,7 @@ def generate_matrix(filename, size):
     with open(filename, 'w') as f:
         f.write(f"{size}\n")
         for _ in range(size):
-            row = [f"{random.uniform(-10.0, 10.0):.15g}" for _ in range(size)]
+            row = [f"{random.uniform(-10.0, 10.0):.17g}" for _ in range(size)]
             f.write(" ".join(row) + "\n")
 
 
