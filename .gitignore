@@ -14,7 +14,12 @@ lab1/output/info.txt
 # Рабочие файлы ЛР2
 lab2/input/*
 lab2/output/result.txt
+lab2/output/info.txt
 lab2/logs/*
+
+# Рабочие файлы ЛР5
+lab5/prog1_mandelbrot_threads/*.ppm
+lab5/prog1_mandelbrot_threads/objs/
 
 # Python
 __pycache__/
@@ -27,3 +32,4 @@ __pycache__/
 !lab2/speedup.png
 !lab2/efficiency.png
 !lab2/time_vs_size.png
+!lab5/speedup_view1.png
