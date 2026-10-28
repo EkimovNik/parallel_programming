@@ -10,7 +10,7 @@
 - [Лаба №1 — Умножение матриц (последовательная версия)](lab1/README.md)
 - [Лаба №2 — Умножение матриц (OpenMP)](lab2/README.md)
 - [Лаба №3 — Умножение матриц (MPI)](lab3/README.md) *(в процессе)*
-- [Лаба №4 — Умножение матриц (CUDA)](lab4/README.md) *(в процессе)*
+- [Лаба №4 — Умножение матриц (CUDA)](lab4/README.md)
 - [Лаба №5 — Stanford CS149 Asst1 (Program 1)](lab5/README.md)
 
 ---
@@ -18,11 +18,7 @@
 
 ```
 parallel_programming/
-├── lab1/
-│   ├── src/lab1.cpp
-│   ├── input/
-│   ├── output/
-│   └── README.md
+├── lab1/                        
 ├── lab2/
 │   ├── src/lab2_omp.cpp
 │   ├── input/
@@ -31,9 +27,13 @@ parallel_programming/
 │   ├── efficiency.png
 │   ├── time_vs_size.png
 │   └── README.md
-├── lab3/                         <-- (ЛР3, в процессе)
-│   └── README.md
-├── lab4/                         <-- (ЛР4, в процессе)
+├── lab3/                         
+├── lab4/
+│   ├── src/lab4_cuda.cu
+│   ├── input/
+│   ├── output/
+│   ├── cuda_time_vs_size.png
+│   ├── cuda_gflops_vs_block.png
 │   └── README.md
 ├── lab5/
 │   ├── common/
@@ -55,7 +55,9 @@ parallel_programming/
 │   ├── plot_graphs.py
 │   ├── experiments_omp.py
 │   ├── plot_graphs_omp.py
-│   └── experiments_cs149.py
+│   ├── experiments_cuda.py        
+│   ├── plot_graphs_cuda.py       
+│   └── experiments_cs149.py      
 ├── .gitignore
 └── README.md
 ```
@@ -78,7 +80,14 @@ py -3.12 scripts\experiments_omp.py
 py -3.12 scripts\plot_graphs_omp.py
 ```
 
-Для ЛР5 скрипт автотестирования запускается из корня репозитория (требует собранного `mandelbrot.exe` в `lab5/prog1_mandelbrot_threads/`):
+Для ЛР4 скрипты запускаются из корня репозитория (требует собранного `lab4_cuda.exe`):
+
+```cmd
+py -3.12 scripts\experiments_cuda.py
+py -3.12 scripts\plot_graphs_cuda.py
+```
+
+Для ЛР5 скрипт автотестирования запускается из корня репозитория (требует собранного `mandelbrot.exe`):
 
 ```cmd
 py -3.12 scripts\experiments_cs149.py

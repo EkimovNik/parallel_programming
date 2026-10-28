@@ -34,3 +34,4 @@ __pycache__/
 !lab2/time_vs_size.png
 !lab5/speedup_view1.png
 *.ppm
+/py
