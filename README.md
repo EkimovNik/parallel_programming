@@ -35,6 +35,8 @@ parallel_programming/
 │   ├── src/lab3_mpi.cpp
 │   ├── output/results.txt
 │   ├── run_experiments.sh
+│   ├── mpi_time_vs_size.png
+│   ├── mpi_speedup_vs_procs.png
 │   └── README.md
 ├── lab4/
 │   ├── src/lab4_cuda.cu
@@ -65,6 +67,7 @@ parallel_programming/
 │   ├── plot_graphs_omp.py
 │   ├── experiments_cuda.py
 │   ├── plot_graphs_cuda.py
+│   ├── plot_graphs_mpi.py        
 │   └── experiments_cs149.py
 ├── .gitignore
 └── README.md
@@ -88,14 +91,10 @@ py -3.12 scripts\experiments_omp.py
 py -3.12 scripts\plot_graphs_omp.py
 ```
 
-Для ЛР3 (MPI) сборка и запуск выполняются **на суперкомпьютере «Сергей Королёв»**:
+Для ЛР3 (MPI) графики строятся локально из готового файла `results.txt`:
 
-```bash
-module load intel/icc18
-module load intel/mpi4
-mpicxx -O3 lab3_mpi.cpp -o lab3_mpi
-chmod +x run_experiments.sh
-./run_experiments.sh
+```cmd
+py -3.12 scripts\plot_graphs_mpi.py
 ```
 
 Для ЛР4 скрипты запускаются из корня репозитория (требует собранного `lab4_cuda.exe`):
