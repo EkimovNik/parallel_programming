@@ -9,7 +9,7 @@
 
 - [Лаба №1 — Умножение матриц (последовательная версия)](lab1/README.md)
 - [Лаба №2 — Умножение матриц (OpenMP)](lab2/README.md)
-- [Лаба №3 — Умножение матриц (MPI)](lab3/README.md) *(в процессе)*
+- [Лаба №3 — Умножение матриц (MPI)](lab3/README.md)
 - [Лаба №4 — Умножение матриц (CUDA)](lab4/README.md)
 - [Лаба №5 — Stanford CS149 Asst1 (Program 1)](lab5/README.md)
 
@@ -18,7 +18,11 @@
 
 ```
 parallel_programming/
-├── lab1/                        
+├── lab1/
+│   ├── src/lab1.cpp
+│   ├── input/
+│   ├── output/
+│   └── README.md
 ├── lab2/
 │   ├── src/lab2_omp.cpp
 │   ├── input/
@@ -27,7 +31,11 @@ parallel_programming/
 │   ├── efficiency.png
 │   ├── time_vs_size.png
 │   └── README.md
-├── lab3/                         
+├── lab3/
+│   ├── src/lab3_mpi.cpp
+│   ├── output/results.txt
+│   ├── run_experiments.sh
+│   └── README.md
 ├── lab4/
 │   ├── src/lab4_cuda.cu
 │   ├── input/
@@ -55,9 +63,9 @@ parallel_programming/
 │   ├── plot_graphs.py
 │   ├── experiments_omp.py
 │   ├── plot_graphs_omp.py
-│   ├── experiments_cuda.py        
-│   ├── plot_graphs_cuda.py       
-│   └── experiments_cs149.py      
+│   ├── experiments_cuda.py
+│   ├── plot_graphs_cuda.py
+│   └── experiments_cs149.py
 ├── .gitignore
 └── README.md
 ```
@@ -78,6 +86,16 @@ py -3.12 plot_graphs.py
 ```cmd
 py -3.12 scripts\experiments_omp.py
 py -3.12 scripts\plot_graphs_omp.py
+```
+
+Для ЛР3 (MPI) сборка и запуск выполняются **на суперкомпьютере «Сергей Королёв»**:
+
+```bash
+module load intel/icc18
+module load intel/mpi4
+mpicxx -O3 lab3_mpi.cpp -o lab3_mpi
+chmod +x run_experiments.sh
+./run_experiments.sh
 ```
 
 Для ЛР4 скрипты запускаются из корня репозитория (требует собранного `lab4_cuda.exe`):
